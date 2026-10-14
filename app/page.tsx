@@ -157,7 +157,7 @@ const certificates = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0B1220] text-white">
+    <main className="min-h-screen bg-background text-foreground">
 
       {/* NAVIGATION */}
      <Navbar />
@@ -168,22 +168,22 @@ export default function Home() {
         className="fade-up mx-auto grid min-h-[75vh] max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-2"
       >
         <div>
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
             Cloud Computing • Technology • Creativity
           </p>
 
           <h1 className="text-5xl font-bold tracking-tight md:text-6xl">
             Hi, I&apos;m{" "}
-            <span className="text-blue-400">
+            <span className="text-accent">
               Thiranji Welgama.
             </span>
           </h1>
 
-          <h2 className="mt-6 text-2xl font-medium text-slate-300 md:text-3xl">
+          <h2 className="mt-6 text-2xl font-medium text-secondary md:text-3xl">
             Building Solutions. Creating Impact.
           </h2>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+          <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
             A Cloud Computing undergraduate passionate about
             technology, intelligent systems, digital creativity
             and practical innovation.
@@ -192,21 +192,21 @@ export default function Home() {
           <div className="mt-9 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="rounded-lg bg-blue-600 px-6 py-3 font-medium transition hover:bg-blue-500"
+              className="rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-500"
             >
               Explore My Work ↗
             </a>
 
             <a
               href="#contact"
-              className="rounded-lg border border-slate-600 px-6 py-3 font-medium transition hover:border-blue-400"
+              className="rounded-lg border border-line px-6 py-3 font-medium transition hover:border-accent"
             >
               Contact Me
             </a>
 
             <a
               href="mailto:wthiranji@gmail.com?subject=CV%20Request"
-              className="rounded-lg border border-blue-500 px-6 py-3 font-medium text-blue-400 transition hover:bg-blue-600 hover:text-white"
+              className="rounded-lg border border-blue-500 px-6 py-3 font-medium text-accent transition hover:bg-blue-600 hover:text-white"
             >
               Request CV ↗
             </a>
@@ -216,7 +216,7 @@ export default function Home() {
         <div className="relative mx-auto w-full max-w-sm">
           <div className="absolute -inset-3 rounded-3xl bg-blue-500/15 blur-2xl" />
 
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-blue-400/30 shadow-2xl shadow-blue-950/40">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-accent/30 shadow-2xl shadow-blue-950/40">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/profile.jpeg`}
               alt="Thiranji Welgama"
@@ -232,10 +232,10 @@ export default function Home() {
       {/* ABOUT */}
       <section
         id="about"
-        className="border-t border-slate-800 px-6 py-24"
+        className="border-t border-divider px-6 py-24"
       >
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold text-blue-400">
+          <p className="mb-3 text-sm font-semibold text-accent">
             01 / ABOUT
           </p>
 
@@ -243,7 +243,7 @@ export default function Home() {
             About Me
           </h2>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted">
             I am an undergraduate at Sri Lanka Technological Campus,
             pursuing a degree in Cloud Computing. I enjoy exploring
             new technologies, researching IT-related topics and
@@ -256,10 +256,10 @@ export default function Home() {
       {/* SKILLS */}
       <section
         id="skills"
-        className="bg-[#101B2E] px-6 py-24"
+        className="bg-surface px-6 py-24"
       >
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold text-blue-400">
+          <p className="mb-3 text-sm font-semibold text-accent">
             02 / SKILLS
           </p>
 
@@ -267,7 +267,7 @@ export default function Home() {
             Skills & Expertise
           </h2>
 
-          <p className="mt-4 max-w-2xl text-slate-400">
+          <p className="mt-4 max-w-2xl text-muted">
             A combination of technical, creative and professional skills.
           </p>
 
@@ -275,7 +275,7 @@ export default function Home() {
             {skills.map((category) => (
               <article
                 key={category.title}
-                className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition duration-300 hover:-translate-y-1 hover:border-blue-500/50"
+                className="rounded-2xl border border-line bg-card p-7 transition duration-300 hover:-translate-y-1 hover:border-blue-500/50"
               >
                 <span className="text-3xl">
                   {category.icon}
@@ -289,7 +289,7 @@ export default function Home() {
                   {category.items.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-md bg-blue-500/10 px-3 py-2 text-xs text-blue-200"
+                      className="rounded-md bg-blue-500/10 px-3 py-2 text-xs text-tag"
                     >
                       {skill}
                     </span>
@@ -304,7 +304,7 @@ export default function Home() {
       {/* PROJECTS */}
       <section id="projects" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold text-blue-400">
+          <p className="mb-3 text-sm font-semibold text-accent">
             03 / PROJECTS
           </p>
 
@@ -312,7 +312,7 @@ export default function Home() {
             Featured Projects
           </h2>
 
-          <p className="mt-4 max-w-2xl text-slate-400">
+          <p className="mt-4 max-w-2xl text-muted">
             Selected academic, technical and creative projects.
           </p>
 
@@ -320,13 +320,13 @@ export default function Home() {
             {projects.map((project, index) => (
               <article
                 key={project.title}
-                className="flex flex-col rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition duration-300 hover:-translate-y-1 hover:border-blue-500/50"
+                className="flex flex-col rounded-2xl border border-line bg-card p-7 transition duration-300 hover:-translate-y-1 hover:border-blue-500/50"
               >
-                <span className="text-4xl font-bold text-blue-400/40">
+                <span className="text-4xl font-bold text-accent/40">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <p className="mt-8 text-xs font-medium uppercase tracking-wider text-blue-400">
+                <p className="mt-8 text-xs font-medium uppercase tracking-wider text-accent">
                   {project.type}
                 </p>
 
@@ -334,7 +334,7 @@ export default function Home() {
                   {project.title}
                 </h3>
 
-                <p className="mt-4 flex-1 leading-7 text-slate-400">
+                <p className="mt-4 flex-1 leading-7 text-muted">
                   {project.description}
                 </p>
 
@@ -342,7 +342,7 @@ export default function Home() {
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-md bg-blue-500/10 px-3 py-2 text-xs text-blue-200"
+                      className="rounded-md bg-blue-500/10 px-3 py-2 text-xs text-tag"
                     >
                       {technology}
                     </span>
@@ -357,10 +357,10 @@ export default function Home() {
       {/* LEADERSHIP */}
       <section
         id="experience"
-        className="bg-[#101B2E] px-6 py-24"
+        className="bg-surface px-6 py-24"
       >
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold text-blue-400">
+          <p className="mb-3 text-sm font-semibold text-accent">
             04 / LEADERSHIP
           </p>
 
@@ -368,7 +368,7 @@ export default function Home() {
             Leadership & Activities
           </h2>
 
-          <p className="mt-4 max-w-2xl text-slate-400">
+          <p className="mt-4 max-w-2xl text-muted">
             Building communication, teamwork and creative experience
             through university activities.
           </p>
@@ -377,9 +377,9 @@ export default function Home() {
             {leadership.map((item) => (
               <article
                 key={`${item.organization}-${item.role}`}
-                className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-8 transition hover:border-blue-500/50"
+                className="rounded-2xl border border-line bg-card p-8 transition hover:border-blue-500/50"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl text-blue-400">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl text-accent">
                   ✦
                 </div>
 
@@ -387,11 +387,11 @@ export default function Home() {
                   {item.role}
                 </h3>
 
-                <p className="mt-2 font-medium text-blue-400">
+                <p className="mt-2 font-medium text-accent">
                   {item.organization}
                 </p>
 
-                <p className="mt-5 leading-7 text-slate-400">
+                <p className="mt-5 leading-7 text-muted">
                   {item.description}
                 </p>
               </article>
@@ -403,7 +403,7 @@ export default function Home() {
       {/* EDUCATION */}
       <section id="education" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold text-blue-400">
+          <p className="mb-3 text-sm font-semibold text-accent">
             05 / EDUCATION
           </p>
 
@@ -411,7 +411,7 @@ export default function Home() {
             Academic Background
           </h2>
 
-          <p className="mt-4 max-w-2xl text-slate-400">
+          <p className="mt-4 max-w-2xl text-muted">
             My academic journey in computing and education.
           </p>
 
@@ -419,7 +419,7 @@ export default function Home() {
             {education.map((item) => (
               <article
                 key={item.degree}
-                className="flex flex-col gap-5 rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 sm:flex-row sm:items-center"
+                className="flex flex-col gap-5 rounded-2xl border border-line bg-card p-7 sm:flex-row sm:items-center"
               >
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-3xl">
                   {item.icon}
@@ -430,11 +430,11 @@ export default function Home() {
                     {item.degree}
                   </h3>
 
-                  <p className="mt-2 font-medium text-blue-400">
+                  <p className="mt-2 font-medium text-accent">
                     {item.institution}
                   </p>
 
-                  <p className="mt-2 text-sm text-slate-400">
+                  <p className="mt-2 text-sm text-muted">
                     {item.period}
                   </p>
                 </div>
@@ -447,10 +447,10 @@ export default function Home() {
       {/* WORK EXPERIENCE */}
       <section
         id="work"
-        className="bg-[#101B2E] px-6 py-24"
+        className="bg-surface px-6 py-24"
       >
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold text-blue-400">
+          <p className="mb-3 text-sm font-semibold text-accent">
             06 / WORK EXPERIENCE
           </p>
 
@@ -458,12 +458,12 @@ export default function Home() {
             Professional Experience
           </h2>
 
-          <p className="mt-4 max-w-2xl text-slate-400">
+          <p className="mt-4 max-w-2xl text-muted">
             Practical experience in customer service, communication
             and organizational operations.
           </p>
 
-          <article className="mt-12 rounded-2xl border border-slate-700/60 bg-[#111C30] p-8">
+          <article className="mt-12 rounded-2xl border border-line bg-card p-8">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-3xl">
                 💼
@@ -474,18 +474,18 @@ export default function Home() {
                   Bank Employee — Loan Section
                 </h3>
 
-                <p className="mt-2 font-medium text-blue-400">
+                <p className="mt-2 font-medium text-accent">
                   Regional Development Bank (RDB)
                 </p>
 
-                <p className="mt-2 text-sm text-slate-400">
+                <p className="mt-2 text-sm text-muted">
                   Duration: 6 Months
                 </p>
               </div>
             </div>
 
-            <div className="mt-7 border-t border-slate-700/60 pt-6">
-              <p className="leading-8 text-slate-400">
+            <div className="mt-7 border-t border-line pt-6">
+              <p className="leading-8 text-muted">
                 Worked as a team member in the loan section,
                 assisting customers with loan applications
                 and processing. Supported daily banking operations,
@@ -500,7 +500,7 @@ export default function Home() {
       {/* CERTIFICATIONS */}
       <section id="certifications" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold text-blue-400">
+          <p className="mb-3 text-sm font-semibold text-accent">
             07 / CERTIFICATIONS
           </p>
 
@@ -508,7 +508,7 @@ export default function Home() {
             Certifications & Qualifications
           </h2>
 
-          <p className="mt-4 max-w-2xl text-slate-400">
+          <p className="mt-4 max-w-2xl text-muted">
             Additional learning and qualifications supporting
             my academic and professional development.
           </p>
@@ -517,13 +517,13 @@ export default function Home() {
             {certificates.map((certificate) => (
               <article
                 key={certificate.name}
-                className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition hover:border-blue-500/50"
+                className="rounded-2xl border border-line bg-card p-7 transition hover:border-blue-500/50"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl text-blue-400">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl text-accent">
                   ☆
                 </div>
 
-                <p className="text-xs font-medium uppercase tracking-wider text-blue-400">
+                <p className="text-xs font-medium uppercase tracking-wider text-accent">
                   {certificate.type}
                 </p>
 
@@ -531,7 +531,7 @@ export default function Home() {
                   {certificate.name}
                 </h3>
 
-                <p className="mt-4 text-sm text-slate-400">
+                <p className="mt-4 text-sm text-muted">
                   {certificate.year}
                 </p>
               </article>
@@ -543,9 +543,9 @@ export default function Home() {
       {/* CONTACT */}
 
 {/* RESEARCH & PROFESSIONAL STRENGTHS */}
-<section id="interests" className="bg-[#101B2E] px-6 py-24">
+<section id="interests" className="bg-surface px-6 py-24">
   <div className="mx-auto max-w-6xl">
-    <p className="mb-3 text-sm font-semibold text-blue-400">
+    <p className="mb-3 text-sm font-semibold text-accent">
   08 / INTERESTS & STRENGTHS
     </p>
 
@@ -553,20 +553,20 @@ export default function Home() {
       Beyond the Classroom
     </h2>
 
-    <p className="mt-4 max-w-2xl text-slate-400">
+    <p className="mt-4 max-w-2xl text-muted">
       Exploring emerging technologies while developing
       professional skills for real-world challenges.
     </p>
 
     <div className="mt-12 grid gap-6 md:grid-cols-2">
-      <article className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-8">
+      <article className="rounded-2xl border border-line bg-card p-8">
         <div className="mb-6 text-3xl">🔬</div>
 
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-foreground">
           Research Interests
         </h3>
 
-        <ul className="mt-6 space-y-4 text-slate-400">
+        <ul className="mt-6 space-y-4 text-muted">
           {[
             "Cloud Computing Projects",
             "Exploring New Technologies",
@@ -576,21 +576,21 @@ export default function Home() {
             "Enhancing Digital Systems and Applications",
           ].map((interest) => (
             <li key={interest} className="flex items-start gap-3">
-              <span className="text-blue-400">✦</span>
+              <span className="text-accent">✦</span>
               <span>{interest}</span>
             </li>
           ))}
         </ul>
       </article>
 
-      <article className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-8">
+      <article className="rounded-2xl border border-line bg-card p-8">
         <div className="mb-6 text-3xl">🤝</div>
 
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-foreground">
           Professional Strengths
         </h3>
 
-        <ul className="mt-6 space-y-4 text-slate-400">
+        <ul className="mt-6 space-y-4 text-muted">
           {[
             "Management Skills",
             "Digital Marketing",
@@ -599,7 +599,7 @@ export default function Home() {
             "Communication Skills",
           ].map((strength) => (
             <li key={strength} className="flex items-start gap-3">
-              <span className="text-blue-400">✦</span>
+              <span className="text-accent">✦</span>
               <span>{strength}</span>
             </li>
           ))}
@@ -611,18 +611,18 @@ export default function Home() {
 
      
 {/* CONTACT SECTION */}
-<section id="contact" className="border-t border-slate-800 bg-[#101B2E] px-6 py-24">
+<section id="contact" className="border-t border-divider bg-surface px-6 py-24">
   <div className="mx-auto max-w-6xl">
     <div className="text-center">
-      <p className="mb-3 text-sm font-semibold text-blue-400">
+      <p className="mb-3 text-sm font-semibold text-accent">
         09 / GET IN TOUCH
       </p>
 
-      <h2 className="text-4xl font-bold text-white md:text-5xl">
+      <h2 className="text-4xl font-bold text-foreground md:text-5xl">
         Let&apos;s Work Together.
       </h2>
 
-      <p className="mx-auto mt-6 max-w-2xl leading-8 text-slate-400">
+      <p className="mx-auto mt-6 max-w-2xl leading-8 text-muted">
         Open to professional opportunities, technology projects
         and creative collaborations. Feel free to connect with me.
       </p>
@@ -631,14 +631,14 @@ export default function Home() {
     <div className="mt-12 grid gap-6 sm:grid-cols-2">
       <a
         href="mailto:wthiranji@gmail.com"
-        className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition hover:-translate-y-1 hover:border-blue-500"
+        className="rounded-2xl border border-line bg-card p-7 transition hover:-translate-y-1 hover:border-blue-500"
       >
         <div className="mb-5 text-3xl">✉️</div>
         <h3 className="text-xl font-semibold">Email</h3>
-        <p className="mt-3 break-all text-slate-400">
+        <p className="mt-3 break-all text-muted">
           wthiranji@gmail.com
         </p>
-        <p className="mt-5 text-sm text-blue-400">
+        <p className="mt-5 text-sm text-accent">
           Send an Email ↗
         </p>
       </a>
@@ -647,14 +647,14 @@ export default function Home() {
         href="https://www.linkedin.com/in/thiranji-welgama/"
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition hover:-translate-y-1 hover:border-blue-500"
+        className="rounded-2xl border border-line bg-card p-7 transition hover:-translate-y-1 hover:border-blue-500"
       >
         <div className="mb-5 text-3xl">💼</div>
         <h3 className="text-xl font-semibold">LinkedIn</h3>
-        <p className="mt-3 text-slate-400">
+        <p className="mt-3 text-muted">
           Connect with me professionally.
         </p>
-        <p className="mt-5 text-sm text-blue-400">
+        <p className="mt-5 text-sm text-accent">
           View LinkedIn ↗
         </p>
       </a>
@@ -663,28 +663,28 @@ export default function Home() {
         href="https://github.com/cit-24-01-0266-git"
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition hover:-translate-y-1 hover:border-blue-500"
+        className="rounded-2xl border border-line bg-card p-7 transition hover:-translate-y-1 hover:border-blue-500"
       >
         <div className="mb-5 text-3xl">💻</div>
         <h3 className="text-xl font-semibold">GitHub</h3>
-        <p className="mt-3 text-slate-400">
+        <p className="mt-3 text-muted">
           Explore my coding projects.
         </p>
-        <p className="mt-5 text-sm text-blue-400">
+        <p className="mt-5 text-sm text-accent">
           Visit GitHub ↗
         </p>
       </a>
 
       <a
         href="mailto:wthiranji@gmail.com?subject=CV%20Request"
-        className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition hover:-translate-y-1 hover:border-blue-500"
+        className="rounded-2xl border border-line bg-card p-7 transition hover:-translate-y-1 hover:border-blue-500"
       >
         <div className="mb-5 text-3xl">📄</div>
         <h3 className="text-xl font-semibold">Request CV</h3>
-        <p className="mt-3 text-slate-400">
+        <p className="mt-3 text-muted">
           Contact me for my qualifications and experience.
         </p>
-        <p className="mt-5 text-sm text-blue-400">
+        <p className="mt-5 text-sm text-accent">
           Request Resume ↗
         </p>
       </a>
@@ -694,7 +694,7 @@ export default function Home() {
 
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-800 px-6 py-7 text-center text-sm text-slate-500">
+      <footer className="border-t border-divider px-6 py-7 text-center text-sm text-subtle">
         © 2026 Thiranji Welgama. All rights reserved.
       </footer>
     </main>

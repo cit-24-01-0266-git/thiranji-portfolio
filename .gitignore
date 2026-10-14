@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Private CV
+/public/Thiranji_Welgama_CV.pdf

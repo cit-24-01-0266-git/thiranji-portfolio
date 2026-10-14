@@ -205,11 +205,10 @@ export default function Home() {
             </a>
 
             <a
-              href="/Thiranji_Welgama_CV.pdf"
-              download
+              href="mailto:wthiranji@gmail.com?subject=CV%20Request"
               className="rounded-lg border border-blue-500 px-6 py-3 font-medium text-blue-400 transition hover:bg-blue-600 hover:text-white"
             >
-              Download CV ↓
+              Request CV ↗
             </a>
           </div>
         </div>
@@ -219,7 +218,7 @@ export default function Home() {
 
           <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-blue-400/30 shadow-2xl shadow-blue-950/40">
             <Image
-              src="/profile.jpeg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/profile.jpeg`}
               alt="Thiranji Welgama"
               fill
               priority
@@ -677,17 +676,16 @@ export default function Home() {
       </a>
 
       <a
-        href="/Thiranji_Welgama_CV.pdf"
-        download
+        href="mailto:wthiranji@gmail.com?subject=CV%20Request"
         className="rounded-2xl border border-slate-700/60 bg-[#111C30] p-7 transition hover:-translate-y-1 hover:border-blue-500"
       >
         <div className="mb-5 text-3xl">📄</div>
-        <h3 className="text-xl font-semibold">Download CV</h3>
+        <h3 className="text-xl font-semibold">Request CV</h3>
         <p className="mt-3 text-slate-400">
-          View my qualifications and experience.
+          Contact me for my qualifications and experience.
         </p>
         <p className="mt-5 text-sm text-blue-400">
-          Download Resume ↓
+          Request Resume ↗
         </p>
       </a>
     </div>
